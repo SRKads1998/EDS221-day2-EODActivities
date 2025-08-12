@@ -1,0 +1,49 @@
+---
+title: "Wild Data"
+format: html
+editor: visual
+---
+
+```{r}
+library(tidyverse)
+library(ggplot2)
+library(here)
+library(janitor)
+library(dplyr)
+```
+
+```{r}
+mack_verts <- read.csv(here((AS00601.csv))
+                       
+mack_verts <- (AS00601.csv)         
+read.csv(here()
+
+```
+
+```{r}
+read.csv(here("data", "AS00601.csv"))
+mack_verts <- read.csv(here("data", "AS00601.csv"))
+view(mack_verts)
+```
+
+```{r}
+# bit of wrangling
+
+mc_wt_5 <- mack_verts$WEIGHT[5]
+mc_length_8_20 <- mack_verts$LENGTH1[8:20]
+
+mc_dates <- subset(mack_verts, SPECIES == DITE)
+
+mc_dates
+```
+
+```{r}
+mc_salamander <- mack_verts %>% filter(SPECIES == "DITE")
+
+```
+
+#salamander subset scater
+
+```{r}
+ggplot(mc_salamander, aes(x = LENGTH1, y = WEIGHT)) + geom_point()
+```
