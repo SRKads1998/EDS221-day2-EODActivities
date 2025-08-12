@@ -47,3 +47,11 @@ mc_salamander <- mack_verts %>% filter(SPECIES == "DITE")
 ```{r}
 ggplot(mc_salamander, aes(x = LENGTH1, y = WEIGHT)) + geom_point()
 ```
+
+```{r}
+mc_trout <- mack_verts %>% filter(SPECIES== "ONCL")
+
+ggplot(mc_trout, aes(x = LENGTH1, y = WEIGHT)) + scale_color_manual(c(M = "green", U = "red", L = "blue")) + geom_point()
+
+
+```
